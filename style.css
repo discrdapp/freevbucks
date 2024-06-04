@@ -1,0 +1,59 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.idiot {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    font-size: 10vw;
+    white-space: nowrap;
+}
+
+.idiotBlack {
+    color: #fff;
+    background-color: #000;
+}
+
+.idiotWhite {
+    color: #000;
+    background-color: #fff;
+}
+
+.idiotUsmieszki {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.freevbucks {
+    background-image: url('freevbucks.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+}
