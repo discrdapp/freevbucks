@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let bialyCzyCzarny = "bialy";
     let x = 0, y = 0, dx = 10, dy = 10; // Initial position and speed
+    var idiotSong = new Audio('youareanidiotsong.mp3');
 
     function idiota() {
         for (let i = 1; i <=3; i++) {
@@ -14,9 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let div = document.getElementById("idiotDiv");
 
         if (bialyCzyCzarny == 'bialy') {
+            document.getElementById("favicon").href = 'idiot1.png'
             div.classList.remove("idiotWhite")
             div.classList.add("idiotBlack")
         }  else {
+            document.getElementById("favicon").href = 'idiot2.png'
             div.classList.remove("idiotBlack")
             div.classList.add("idiotWhite")
         }
@@ -27,8 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }  else {
                 bialyCzyCzarny = 'bialy'
             }
-            requestAnimationFrame(idiota)
-        }, 200);
+            console.log("xd")
+            idiota()
+        }, 100);
     }
 
     let youareanidiot = null;
@@ -75,16 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
             idiotDiv.classList.remove('d-none')
             idiotDiv.classList.add('d-flex')
             idiota()
-            var audio = new Audio('youareanidiotsong.mp3');
-            audio.play();
+            idiotSong.play();
 
-            audio.addEventListener("ended", function() 
+            idiotSong.addEventListener("ended", function() 
             {
-                audio.play();
+                idiotSong.play();
             });
         }
     }) 
     document.addEventListener("click", () => {
         spawnokienko();
     })
+    window.addEventListener('beforeunload', function (e) {
+        if (youareanidiot && !youareanidiot.closed) {
+            youareanidiot.close();
+        }
+    });
 });
