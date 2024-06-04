@@ -82,11 +82,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
         youareanidiot = window.open("", "", "width=400,height=350");
         youareanidiot.document.write("<body style='margin: 0;'><img src='youareanidiot.gif' style='width: 100%; height: 100%;'></body>")
+        youareanidiot2 = window.open("", "", "width=400,height=350");
+        youareanidiot2.document.write("<body style='margin: 0;'><img src='youareanidiot.gif' style='width: 100%; height: 100%;'></body>")
+        youareanidiot3 = window.open("", "", "width=400,height=350");
+        youareanidiot3.document.write("<body style='margin: 0;'><img src='youareanidiot.gif' style='width: 100%; height: 100%;'></body>")
+        youareanidiot4 = window.open("", "", "width=400,height=350");
+        youareanidiot4.document.write("<body style='margin: 0;'><img src='youareanidiot.gif' style='width: 100%; height: 100%;'></body>")
+        youareanidiot5 = window.open("", "", "width=400,height=350");
+        youareanidiot5.document.write("<body style='margin: 0;'><img src='youareanidiot.gif' style='width: 100%; height: 100%;'></body>")
     
         function okienko() {
             x += dx;
             y += dy;
             youareanidiot.moveTo(x, y);
+            youareanidiot2.moveTo(x + 10, y + 10);
+            youareanidiot3.moveTo(x + 20, y + 20);
+            youareanidiot4.moveTo(x + 30, y + 30);
+            youareanidiot5.moveTo(x + 40, y + 40);
     
             if (x + 400 > window.screen.width || x < 0) dx = -dx;
             if (y + 350 > window.screen.availHeight || y < 0) dy = -dy;
@@ -99,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 requestAnimationFrame(okienko)
             }, 10);
         }
+        
         okienko()
     }
 
